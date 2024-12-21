@@ -1,77 +1,87 @@
+/* Phần tử hero chính, chứa hình ảnh nền và thông tin */
 .hero-section {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  padding: 0 40px;
+  position: relative; /* Đặt vị trí phần tử ở chế độ relative */
+  width: 100vw; /* Chiếm toàn bộ chiều rộng màn hình */
+  height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+  display: flex; /* Dùng flexbox để bố trí các phần tử con */
+  justify-content: space-between; /* Phân bố không gian đều giữa các phần tử con */
+  align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+  gap: 24px; /* Tạo khoảng cách 24px giữa các phần tử con */
+  padding: 0 40px; /* Thêm khoảng cách 40px ở trái và phải */
 }
 
+/* Hình ảnh nền của phần hero, phủ toàn màn hình */
 .hero-image {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
+  width: 100vw; /* Chiếm toàn bộ chiều rộng màn hình */
+  height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+  position: absolute; /* Đặt hình ảnh ở vị trí tuyệt đối */
+  top: 0; /* Đưa hình ảnh lên trên cùng */
+  left: 0; /* Đưa hình ảnh sang trái cùng */
+  object-fit: cover; /* Căn chỉnh hình ảnh sao cho đầy đủ và không bị méo */
 }
 
+/* Thông tin trong phần hero, như tiêu đề và mô tả */
 .hero-section-info {
-  z-index: 10;
-  width: auto;
-  display: flex;
-  flex: 1 1 0%;
-  justify-content: center;
-  align-items: center;
+  z-index: 10; /* Đảm bảo phần này nằm trên hình nền */
+  width: auto; /* Chiều rộng tự động */
+  display: flex; /* Dùng flexbox để bố trí các phần tử con */
+  flex: 1 1 0%; /* Các phần tử con chiếm không gian còn lại */
+  justify-content: center; /* Căn giữa các phần tử con theo chiều ngang */
+  align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
 }
 
+/* Bố trí các phần tử con của hero-section-info */
 .hero-section-info > div {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 16px;
+  display: flex; /* Dùng flexbox để sắp xếp các phần tử con */
+  flex-direction: column; /* Sắp xếp các phần tử theo cột */
+  align-items: start; /* Căn lề trái cho các phần tử con */
+  gap: 16px; /* Khoảng cách 16px giữa các phần tử */
 }
 
+/* Tiêu đề trong phần hero */
 .hero-section-info-title {
-  font-size: 48px;
-  line-height: 1;
-  color: var(--gray-100);
-  max-width: 576px;
+  font-size: 48px; /* Kích thước chữ lớn */
+  line-height: 1; /* Đảm bảo không có khoảng cách giữa các dòng */
+  color: var(--gray-100); /* Màu chữ */
+  max-width: 576px; /* Hạn chế chiều rộng tối đa của tiêu đề */
 }
 
+/* Mô tả trong phần hero */
 .hero-section-info-description {
-  font-size: 20px;
-  line-height: 28px;
-  max-width: 576px;
-  color: var(--gray-100);
-  text-align: justify;
+  font-size: 20px; /* Kích thước chữ vừa phải */
+  line-height: 28px; /* Khoảng cách giữa các dòng */
+  max-width: 576px; /* Hạn chế chiều rộng tối đa của mô tả */
+  color: var(--gray-100); /* Màu chữ */
+  text-align: justify; /* Căn đều văn bản */
 }
 
+/* Khối chứa các nút hành động */
 .action-buttons-container {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: flex; /* Dùng flexbox để căn giữa các nút */
+  gap: 12px; /* Khoảng cách 12px giữa các nút */
+  justify-content: center; /* Căn giữa các nút theo chiều ngang */
+  flex-wrap: wrap; /* Cho phép các nút xuống dòng khi không đủ không gian */
 }
 
+/* Container chứa hình ảnh xem trước */
 .hero-preview-img-container {
-  display: flex;
-  flex: 1 1 0%;
-  justify-content: center;
-  align-items: center;
-  min-width: 300px;
+  display: flex; /* Dùng flexbox để căn giữa hình ảnh */
+  flex: 1 1 0%; /* Chiếm không gian còn lại */
+  justify-content: center; /* Căn giữa hình ảnh theo chiều ngang */
+  align-items: center; /* Căn giữa hình ảnh theo chiều dọc */
+  min-width: 300px; /* Chiều rộng tối thiểu của container là 300px */
 }
 
+/* Hình ảnh xem trước */
 .hero-preview-img-container img {
-  z-index: 10;
-  width: 300px;
-  border-radius: 12px;
+  z-index: 10; /* Đảm bảo hình ảnh hiển thị trên các phần tử khác */
+  width: 300px; /* Chiều rộng của hình ảnh */
+  border-radius: 12px; /* Bo tròn các góc của hình ảnh */
 }
 
+/* Media query cho các thiết bị có màn hình nhỏ (dưới 768px) */
 @media screen and (max-width: 768px) {
   .hero-preview-img-container {
-    display: none;
+    display: none; /* Ẩn hình ảnh xem trước khi trên màn hình nhỏ */
   }
 }

@@ -1,180 +1,207 @@
+/* Nhúng font Roboto từ Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
 
+/* Đặt mặc định cho tất cả các phần tử trong trang */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  margin: 0; /* Xóa bỏ khoảng cách mặc định */
+  padding: 0; /* Xóa bỏ đệm mặc định */
+  box-sizing: border-box; /* Đảm bảo tính toán kích thước phần tử bao gồm cả viền và padding */
+  font-family: "Roboto", sans-serif; /* Áp dụng font Roboto */
 }
 
+/* Đặt nền của body là màu đen */
 body {
-  background: #000;
+  background: #000; /* Nền đen cho toàn bộ trang */
 }
 
+/* Thêm một hình nền bán trong suốt */
 body::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0.5;
-  width: 100%;
-  height: 100%;
-  background: url("../assets/hero-img.jpg");
-  background-position: center;
+  content: ""; /* Không có nội dung nhưng tạo ra một pseudo-element */
+  position: absolute; /* Đặt vị trí tuyệt đối */
+  left: 0; /* Đặt tại góc trái */
+  top: 0; /* Đặt tại góc trên */
+  opacity: 0.5; /* Độ mờ 50% */
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  height: 100%; /* Chiếm toàn bộ chiều cao */
+  background: url("../assets/hero-img.jpg"); /* Chèn hình nền */
+  background-position: center; /* Căn giữa hình nền */
 }
 
+/* Thanh điều hướng cố định ở phía trên */
 nav {
-  position: fixed;
-  padding: 25px 60px;
-  z-index: 1;
+  position: fixed; /* Đặt thanh điều hướng cố định */
+  padding: 25px 60px; /* Đệm cho thanh điều hướng */
+  z-index: 1; /* Đảm bảo thanh điều hướng luôn hiển thị trên các phần tử khác */
 }
 
+/* Hình ảnh trong thanh điều hướng */
 nav a img {
-  width: 167px;
+  width: 167px; /* Đặt chiều rộng cho hình ảnh trong thanh điều hướng */
 }
 
+/* Khối form đăng nhập/đăng ký */
 .form-wrapper {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  border-radius: 4px;
-  padding: 70px;
-  width: 450px;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.75);
+  position: absolute; /* Đặt form ở vị trí tuyệt đối */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  top: 50%; /* Căn giữa theo chiều dọc */
+  border-radius: 4px; /* Bo tròn các góc của form */
+  padding: 70px; /* Thêm đệm cho form */
+  width: 450px; /* Đặt chiều rộng cố định */
+  transform: translate(-50%, -50%); /* Căn chỉnh chính xác form ở giữa */
+  background: rgba(0, 0, 0, 0.75); /* Màu nền đen bán trong suốt */
 }
 
+/* Tiêu đề của form */
 .form-wrapper h2 {
-  color: #fff;
-  font-size: 2rem;
+  color: #fff; /* Màu chữ trắng */
+  font-size: 2rem; /* Kích thước chữ */
 }
 
+/* Form và các phần tử bên trong */
 .form-wrapper form {
-  margin: 25px 0 65px;
+  margin: 25px 0 65px; /* Khoảng cách trên và dưới form */
 }
 
+/* Phần tử nhập liệu */
 form .form-control {
-  height: 50px;
-  position: relative;
-  margin-bottom: 16px;
+  height: 50px; /* Chiều cao của ô nhập liệu */
+  position: relative; /* Đặt vị trí tương đối để thao tác với label */
+  margin-bottom: 16px; /* Khoảng cách dưới giữa các ô nhập liệu */
 }
 
+/* Ô input trong form */
 .form-control input {
-  height: 100%;
-  width: 100%;
-  background: #333;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 1rem;
-  padding: 0 20px;
+  height: 100%; /* Chiều cao của ô input bằng với phần tử chứa */
+  width: 100%; /* Chiều rộng bằng với phần tử chứa */
+  background: #333; /* Màu nền xám cho ô input */
+  border: none; /* Xóa viền mặc định */
+  outline: none; /* Xóa viền khi ô input được chọn */
+  border-radius: 4px; /* Bo tròn các góc của ô input */
+  color: #fff; /* Màu chữ trắng */
+  font-size: 1rem; /* Kích thước chữ trong ô input */
+  padding: 0 20px; /* Đệm bên trái và phải */
 }
 
+/* Khi ô input được chọn hoặc hợp lệ */
 .form-control input:is(:focus, :valid) {
-  background: #444;
-  padding: 16px 20px 0;
+  background: #444; /* Thay đổi màu nền khi ô input được chọn */
+  padding: 16px 20px 0; /* Thêm đệm phía trên khi input có nội dung */
 }
 
+/* Nhãn của các ô input */
 .form-control label {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1rem;
-  pointer-events: none;
-  color: #8c8c8c;
-  transition: all 0.1s ease;
+  position: absolute; /* Đặt nhãn ở vị trí tuyệt đối */
+  left: 20px; /* Căn lề trái */
+  top: 50%; /* Căn giữa theo chiều dọc */
+  transform: translateY(-50%); /* Căn chỉnh chính xác nhãn */
+  font-size: 1rem; /* Kích thước chữ */
+  pointer-events: none; /* Tắt khả năng tương tác với nhãn */
+  color: #8c8c8c; /* Màu nhãn xám */
+  transition: all 0.1s ease; /* Hiệu ứng chuyển động khi nhãn thay đổi */
 }
 
+/* Khi ô input được chọn hoặc hợp lệ, nhãn di chuyển lên trên */
 .form-control input:is(:focus, :valid) ~ label {
-  font-size: 0.75rem;
-  transform: translateY(-130%);
+  font-size: 0.75rem; /* Giảm kích thước chữ của nhãn */
+  transform: translateY(-130%); /* Đưa nhãn lên trên */
 }
 
+/* Nút đăng nhập/đăng ký */
 form button {
-  width: 100%;
-  padding: 16px 0;
-  font-size: 1rem;
-  background: #e50914;
-  color: #fff;
-  font-weight: 500;
-  border-radius: 4px;
-  border: none;
-  outline: none;
-  margin: 25px 0 10px;
-  cursor: pointer;
-  transition: 0.1s ease;
+  width: 100%; /* Chiếm toàn bộ chiều rộng của form */
+  padding: 16px 0; /* Đệm trên và dưới */
+  font-size: 1rem; /* Kích thước chữ */
+  background: #e50914; /* Màu nền đỏ */
+  color: #fff; /* Màu chữ trắng */
+  font-weight: 500; /* Độ đậm chữ */
+  border-radius: 4px; /* Bo tròn các góc của nút */
+  border: none; /* Xóa viền nút */
+  outline: none; /* Xóa viền khi nút được chọn */
+  margin: 25px 0 10px; /* Khoảng cách trên và dưới nút */
+  cursor: pointer; /* Hiển thị con trỏ tay khi di chuột vào nút */
+  transition: 0.1s ease; /* Hiệu ứng chuyển động khi hover */
 }
 
+/* Hiệu ứng khi hover vào nút */
 form button:hover {
-  background: #c40812;
+  background: #c40812; /* Đổi màu nền khi hover */
 }
 
+/* Các liên kết trong form */
 .form-wrapper a {
-  text-decoration: none;
+  text-decoration: none; /* Xóa gạch chân khỏi liên kết */
 }
 
+/* Hiệu ứng khi hover vào liên kết */
 .form-wrapper a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Gạch chân khi hover vào liên kết */
 }
 
+/* Định dạng cho các phần tử khác trong form */
 .form-wrapper :where(label, p, small, a) {
-  color: #b3b3b3;
+  color: #b3b3b3; /* Màu xám cho nhãn, đoạn văn, chú thích và liên kết */
 }
 
+/* Cụm trợ giúp (Help) trong form */
 form .form-help {
-  display: flex;
-  justify-content: space-between;
+  display: flex; /* Sử dụng flexbox để căn chỉnh */
+  justify-content: space-between; /* Căn giữa khoảng cách giữa các phần tử */
 }
 
+/* Phần Remember Me */
 form .remember-me {
-  display: flex;
+  display: flex; /* Dùng flexbox để sắp xếp checkbox và nhãn */
 }
 
+/* Thiết lập khoảng cách cho checkbox */
 form .remember-me input {
-  margin-right: 5px;
-  accent-color: #b3b3b3;
+  margin-right: 5px; /* Khoảng cách giữa checkbox và nhãn */
+  accent-color: #b3b3b3; /* Màu sắc của checkbox */
 }
 
+/* Định dạng lại cho các liên kết và nhãn trong phần trợ giúp */
 form .form-help :where(label, a) {
-  font-size: 0.9rem;
+  font-size: 0.9rem; /* Kích thước chữ nhỏ hơn */
 }
 
+/* Liên kết trong phần form-wrapper */
 .form-wrapper p a {
-  color: #fff;
+  color: #fff; /* Màu chữ trắng cho liên kết */
 }
 
+/* Chú thích nhỏ trong form */
 .form-wrapper small {
-  display: block;
-  margin-top: 15px;
-  color: #b3b3b3;
+  display: block; /* Hiển thị dưới dạng block */
+  margin-top: 15px; /* Khoảng cách trên */
+  color: #b3b3b3; /* Màu xám */
 }
 
+/* Liên kết trong chú thích nhỏ */
 .form-wrapper small a {
-  color: #0071eb;
+  color: #0071eb; /* Màu xanh cho liên kết trong chú thích nhỏ */
 }
 
+/* Media query cho các thiết bị có màn hình nhỏ (dưới 740px) */
 @media (max-width: 740px) {
   body::before {
-    display: none;
+    display: none; /* Ẩn hình nền khi màn hình nhỏ */
   }
 
   nav,
   .form-wrapper {
-    padding: 20px;
+    padding: 20px; /* Thêm đệm cho thanh điều hướng và form */
   }
 
   nav a img {
-    width: 140px;
+    width: 140px; /* Điều chỉnh kích thước hình ảnh trong thanh điều hướng */
   }
 
   .form-wrapper {
-    width: 100%;
-    top: 43%;
+    width: 100%; /* Form chiếm toàn bộ chiều rộng màn hình */
+    top: 43%; /* Đặt form gần giữa màn hình */
   }
 
   .form-wrapper form {
-    margin: 25px 0 40px;
+    margin: 25px 0 40px; /* Điều chỉnh khoảng cách trong form */
   }
 }

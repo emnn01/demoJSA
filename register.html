@@ -2,38 +2,75 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Thiết lập mã hóa ký tự cho trang web -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Đảm bảo trang web hiển thị đúng trên mọi thiết bị với kích thước màn hình khác nhau -->
+
     <title>Register</title>
+    <!-- Tiêu đề của trang web -->
+
     <link rel="stylesheet" href="./styles/auth.css" />
+    <!-- Liên kết đến tệp CSS để định kiểu cho trang đăng ký -->
   </head>
   <body>
     <div class="form-wrapper">
+      <!-- Bao bọc form đăng ký -->
+      
       <h2>Sign Up</h2>
+      <!-- Tiêu đề của form đăng ký -->
+
       <form action="#">
+        <!-- Form đăng ký -->
+
         <div class="form-control">
+          <!-- Một khối điều khiển form -->
           <input id="username" type="text" required />
+          <!-- Trường nhập liệu cho tên người dùng, bắt buộc phải nhập -->
           <label>Username</label>
+          <!-- Nhãn cho trường nhập liệu tên người dùng -->
         </div>
+
         <div class="form-control">
+          <!-- Một khối điều khiển form -->
           <input id="email" type="text" required />
+          <!-- Trường nhập liệu cho địa chỉ email, bắt buộc phải nhập -->
           <label>Email address</label>
+          <!-- Nhãn cho trường nhập liệu địa chỉ email -->
         </div>
+
         <div class="form-control">
+          <!-- Một khối điều khiển form -->
           <input id="password" type="password" required />
+          <!-- Trường nhập liệu cho mật khẩu, bắt buộc phải nhập -->
           <label>Password</label>
+          <!-- Nhãn cho trường nhập liệu mật khẩu -->
         </div>
+
         <button type="submit">Sign Up</button>
+        <!-- Nút gửi form đăng ký -->
+
         <div class="form-help">
+          <!-- Khối chứa các trợ giúp liên quan đến form -->
+          
           <div class="remember-me">
+            <!-- Khối điều khiển cho tính năng ghi nhớ đăng nhập -->
             <input type="checkbox" id="remember-me" />
+            <!-- Ô checkbox để ghi nhớ đăng nhập -->
             <label for="remember-me">Remember me</label>
+            <!-- Nhãn cho ô checkbox ghi nhớ đăng nhập -->
           </div>
+          
           <a href="#">Need help?</a>
+          <!-- Liên kết đến trang trợ giúp -->
         </div>
       </form>
+
       <p>Already have an account? <a href="./login.html">Sign in now</a></p>
+      <!-- Đoạn văn bản cho biết nếu đã có tài khoản thì đăng nhập và liên kết đến trang đăng nhập -->
     </div>
 
     <script src="./scripts/register.js"></script>
+    <!-- Liên kết đến tệp JavaScript để xử lý các sự kiện và logic liên quan đến form đăng ký -->
   </body>
 </html>
