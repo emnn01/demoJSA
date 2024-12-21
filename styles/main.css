@@ -1,9 +1,11 @@
+/* Đặt lại margin và padding của tất cả các phần tử, và thiết lập box-sizing thành border-box */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Định nghĩa các biến màu sắc sử dụng trong trang web */
 :root {
   --dark-lighten: #2a2a2a;
   --dark: #222;
@@ -12,10 +14,10 @@
   --red: #b12922;
   --gray-100: #f3f4f6;
   --gray-200: #e5e7eb;
-
-  --swiper-theme-color: #b12922 !important;
+  --swiper-theme-color: #b12922 !important; /* Màu chủ đề của Swiper */
 }
 
+/* Thiết lập các thuộc tính cơ bản cho body */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: var(--dark);
@@ -24,16 +26,19 @@ body {
   overflow-x: hidden;
 }
 
+/* Thiết lập các thuộc tính cơ bản cho các thẻ a */
 a {
-  color: inherit;
+  color: inherit; /* Giữ nguyên màu sắc từ phần tử cha */
   text-decoration: none;
 }
 
+/* Hiệu ứng fade-in cho các phần tử */
 .fade-in {
   opacity: 0;
   transition: 0.3s;
 }
 
+/* Hiển thị văn bản đa dòng với dấu chấm lửng sau 4 dòng */
 .multiline-ellipsis-4 {
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -41,6 +46,7 @@ a {
   overflow: hidden;
 }
 
+/* Hiển thị văn bản đa dòng với dấu chấm lửng sau 2 dòng */
 .multiline-ellipsis-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -48,6 +54,7 @@ a {
   overflow: hidden;
 }
 
+/* Thiết lập các thuộc tính cơ bản cho các nút bấm */
 .btn {
   outline: none;
   border: none;
@@ -62,10 +69,12 @@ a {
   white-space: nowrap;
 }
 
+/* Hiệu ứng hover cho các nút bấm */
 .btn:hover {
   background: var(--dark-darken);
 }
 
+/* Thiết lập các thuộc tính cho thanh navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -83,11 +92,13 @@ a {
   border-bottom: 2px solid transparent;
 }
 
+/* Khi thanh navbar có nền */
 .navbar-background-visible {
   background: var(--dark);
   border-bottom: 2px solid var(--dark-lighten);
 }
 
+/* Thiết lập các thuộc tính cho backdrop */
 .backdrop {
   position: fixed;
   top: 0;
@@ -102,11 +113,13 @@ a {
   z-index: 100;
 }
 
+/* Khi backdrop bị ẩn */
 .backdrop-hidden {
   opacity: 0;
   visibility: hidden;
 }
 
+/* Thiết lập các thuộc tính cho footer */
 footer {
   display: flex;
   justify-content: space-between;
@@ -117,21 +130,25 @@ footer {
   background: var(--dark-lighten);
 }
 
+/* Thiết lập các thuộc tính cho các phần tử con trong footer */
 footer > div {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+/* Thiết lập các thuộc tính cho Swiper */
 .swiper {
   width: 100vw;
 }
 
+/* Thiết lập padding cho Swiper wrapper */
 .swiper-wrapper {
   padding-left: 3vw !important;
   padding-right: 3vw !important;
 }
 
+/* Thiết lập các thuộc tính cho thẻ movie-card */
 .movie-card {
   border-radius: 8px;
   overflow: hidden;
@@ -143,12 +160,14 @@ footer > div {
   transition: 0.3s;
 }
 
+/* Thiết lập các thuộc tính cho hình ảnh trong movie-card */
 .movie-card img {
   height: 300px;
   width: 200px;
   object-fit: cover;
 }
 
+/* Thiết lập các thuộc tính cho văn bản trong movie-card */
 .movie-card p {
   margin: 8px;
   height: 36px;
@@ -156,14 +175,17 @@ footer > div {
   transition: 0.3s;
 }
 
+/* Hiệu ứng hover cho movie-card */
 .movie-card:hover {
   opacity: 0.8;
 }
 
+/* Hiệu ứng hover cho văn bản trong movie-card */
 .movie-card:hover p {
   color: var(--red);
 }
 
+/* Thiết lập các thuộc tính cho thẻ section */
 .section h2 {
   font-weight: 500;
   font-size: 24px;
@@ -171,17 +193,20 @@ footer > div {
   margin: 32px 3vw 12px 3vw;
 }
 
+/* Thiết lập các thuộc tính cho thẻ avatar-action */
 .avatar-action {
   position: relative;
   cursor: pointer;
 }
 
+/* Thiết lập các thuộc tính cho hình ảnh trong avatar-action */
 .avatar-action img {
   width: 25px;
   height: 25px;
   border-radius: 9999px;
 }
 
+/* Thiết lập các thuộc tính cho popup */
 .popup {
   opacity: 0;
   visibility: hidden;
@@ -196,11 +221,13 @@ footer > div {
   width: max-content;
 }
 
+/* Định vị lại popup khi nó nằm ở bên trái */
 .popup-left {
   right: unset;
   left: 0;
 }
 
+/* Thiết lập các thuộc tính cho nút hành động trong popup */
 .popup .action-button {
   cursor: pointer;
   width: 100%;
@@ -216,17 +243,22 @@ footer > div {
   transition: 0.3s;
 }
 
+/* Hiệu ứng hover cho nút hành động trong popup */
 .popup .action-button:hover {
   background: #e8e8e8;
 }
 
+/* Thiết lập kích thước font cho biểu tượng trong nút hành động của popup */
 .popup .action-button i {
   font-size: 14px !important;
 }
+
+/* Thiết lập kích thước font cho nút hành động trong popup */
 .popup .action-button {
   font-size: 14px !important;
 }
 
+/* Hiển thị popup khi avatar-action được focus */
 .avatar-action:focus-within .popup {
   opacity: 1;
   visibility: visible;
